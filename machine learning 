@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMRCV60MlCxfWNarKkRPJUP",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shalin0078/cyber-sic./blob/main/machine%20learning%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QJ46WrZ2O7Fo",
+        "outputId": "50db624a-8c83-4849-bb26-9b4afe6a1642"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10 20 30 40 50]\n",
+            "mean: 30.0\n",
+            "squared: [ 100  400  900 1600 2500]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "arr=np.array([10,20,30,40,50])\n",
+        "print(arr)\n",
+        "print(\"mean:\", np.mean(arr))\n",
+        "print(\"squared:\", arr**2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **case study : student performance analysis using numpy.**bold text**\n",
+        "ps: a teacher want to analyze the perormance of the 5 student in 3 subject .\n"
+      ],
+      "metadata": {
+        "id": "aRoBqeoQQJD4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "marks=np.array([[88,92,85],\n",
+        "               [76,81,79],\n",
+        "               [90,89,92],\n",
+        "               [69,75,70],\n",
+        "               [95,94,98]])\n",
+        "#1.calculation for total mark per student#\n",
+        "total_marks=np.sum(marks,axis=1)\n",
+        "#average marks per subject#\n",
+        "avg_per_subject = np.mean(marks,axis=0)\n",
+        "#higher score in the class#\n",
+        "highest_score=np.max(marks)\n",
+        "#percentage of each student(our of 300)#\n",
+        "percentage=total_marks/300*100\n",
+        "print(\"total_marks:\",total_marks)\n",
+        "print(\"avg_per_subject:\",avg_per_subject)\n",
+        "print(\"top_marks:\",highest_score)\n",
+        "print(\"percentage:\",percentage)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lHkp1I9tQ_eG",
+        "outputId": "8363f624-aa90-4994-eb0a-272259aadf74"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "total_marks: [265 236 271 214 287]\n",
+            "avg_per_subject: [83.6 86.2 84.8]\n",
+            "top_marks: 98\n",
+            "percentage: [88.33333333 78.66666667 90.33333333 71.33333333 95.66666667]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
